@@ -35,6 +35,7 @@ public class player : MonoBehaviour
         {
             lastpos = Input.mousePosition;
             chenge = firstpos - lastpos;
+            chenge = power * chenge;
             target.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(chenge.x, 0, chenge.y));
         }
     }
