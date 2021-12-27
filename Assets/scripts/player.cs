@@ -63,4 +63,8 @@ public class player : MonoBehaviour
             target.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(chenge.x, 0, chenge.y));
         }
     }
+    public void rematch()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }

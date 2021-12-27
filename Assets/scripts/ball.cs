@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
+    public GameObject leftgoalcanvas, rightgoalcanvas;
     Rigidbody myrigid;
     // Start is called before the first frame update
     void Start()
@@ -24,11 +25,13 @@ public class ball : MonoBehaviour
         {
             myrigid.drag = 1;
             Debug.Log(" Left Goal !!! ");
+            leftgoalcanvas.SetActive(true);
         }
         if (myTrigger.gameObject.tag == "right goal")
         {
             myrigid.drag = 1;
             Debug.Log(" Right Goal !!! ");
+            rightgoalcanvas.SetActive(true);
         }
     }
 
